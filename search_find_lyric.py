@@ -2,7 +2,6 @@
 # @author: Batuhan Gürses
 
 import requests
-import sys
 from bs4 import BeautifulSoup
 
 
@@ -58,9 +57,6 @@ def retrieve_lyric(url):
             metrolyric = soup.find('div', id='lyrics-body-text').find_all('p', class_='verse')
             return ' \n\n'.join([lyric.text for lyric in metrolyric])
     except :
-        print("///////")
-        print(sys.exc_info()[0])
-        print("///////")
         return None
 
 def lyric_main(song_name):
