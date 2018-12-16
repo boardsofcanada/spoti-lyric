@@ -75,7 +75,7 @@ class SpotiLyric:
     def run(self):
         song = self.get_song_name()
         if self.temp_song_name != song and song != None:
-            print("1")
+            print("Song changed...")
             # if program runs first time or playing song changes
             lyric = self.get_lyric(song)
             self.temp_song_name = song
