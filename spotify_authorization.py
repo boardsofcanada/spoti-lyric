@@ -81,7 +81,6 @@ class SpotifyAuthorization:
             }
         req = requests.post(url, data=body_params, headers=header_base64)
         if req.status_code == 200:
-            refresh_token = req.json()['refresh_token']
             return req.json()['refresh_token']
         else:
             return None
